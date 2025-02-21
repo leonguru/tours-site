@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Tanzania Safari Adventures</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <style>
+        .gallery-image-container {
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+        .gallery-image {
+            opacity: 0.9;
+            transition: all 0.5s ease;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+            color: white;
+            padding: 2rem;
+            transform: translateY(100%);
+            transition: transform 0.5s ease;
+        }
+        .gallery-image-container:hover .image-overlay {
+            transform: translateY(0);
+        }
+        .gallery-image-container:hover .gallery-image {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+        .location-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .info-text {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 300px;
+            grid-auto-flow: dense;
+            gap: 2rem;
+        }
+        .span-2 {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .span-row-2 {
+            grid-row: span 2;
+        }
+        .span-col-2 {
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Minimal Navigation -->
+    <nav class="py-6 px-8 flex justify-between items-center">
+        <a href="index.html" class="text-xl text-gray-700">Tanzania Adventures</a>
+        <div class="space-x-8">
+            <a href="index.html" class="text-gray-600 hover:text-gray-900">Home</a>
+            <a href="routes.html" class="text-gray-600 hover:text-gray-900">Routes</a>
+            <a href="#" class="text-gray-900 border-b border-gray-900">Gallery</a>
+        </div>
+    </nav>
+
+    <!-- Minimalist Gallery Grid -->
+    <div class="px-8 py-12">
+        <div class="masonry-grid">
+            <!-- Row 1 -->
+            <div class="span-2">
+                <div class="gallery-image-container">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801" 
+                         alt="Serengeti Plains" 
+                         class="gallery-image">
+                    <div class="image-overlay">
+                        <div class="location-text">Serengeti Plains</div>
+                        <div class="info-text">Vast savannah landscapes in Northern Serengeti, home to the great wildebeest migration</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="gallery-image-container">
+                    <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e" 
+                         alt="Mount Kilimanjaro" 
+                         class="gallery-image">
+                    <div class="image-overlay">
+                        <div class="location-text">Mount Kilimanjaro</div>
+                        <div class="info-text">Africa's highest peak, rising 5,895 meters above sea level</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="gallery-image-container">
+                    <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53" 
+                         alt="Zanzibar Beach" 
+                         class="gallery-image">
+                    <div class="image-overlay">
+                        <div class="location-text">Zanzibar Archipelago</div>
+                        <div class="info-text">Crystal clear waters and pristine beaches of the Indian Ocean</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="span-col-2">
+                <div class="gallery-image-container">
+                    <img src="https://images.unsplash.com/photo-1534177616072-ef7dc120449d" 
+                         alt="Ngorongoro Crater" 
+                         class="gallery-image">
+                    <div class="image-overlay">
+                        <div class="location-text">Ngorongoro Crater</div>
+                        <div class="info-text">World's largest intact volcanic caldera, rich in wildlife</div>
+                    </div>
+                </div>
+            </div>
+            <div class="span-row-2">
+                <div class="gallery-image-container">
+                    <img src="https://images.unsplash.com/photo-1515205244153-31a0a5ccbb6c" 
+                         alt="Lake Manyara" 
+                         class="gallery-image">
+                    <div class="image-overlay">
+                        <div class="location-text">Lake Manyara</div>
+                        <div class="info-text">Famous for tree-climbing lions and diverse bird species</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="span-2">
+                <div class="gallery-image-container">
+                    <img src="view-quiver-trees-forest-with-beautiful-sky-sunset-twilight-sky-scene-keetmanshoop-namibia.jpg" 
+                         alt="Kilimanjaro Sunset" 
+                         class="gallery-image">
+                    <div class="image-overlay">
+                        <div class="location-text">Kilimanjaro Sunset</div>
+                        <div class="info-text">Dramatic sunset over ancient quiver trees in the Kilimanjaro region, showcasing Tanzania's unique flora</div>
+                    </div>
+                </div>
+            </div>
+            <div class="span-col-2">
+                <div class="gallery-image-container">
+                    <img src="beautiful-landscape-tanzania-kenya.jpg" 
+                         alt="Kilimanjaro Snow Peak" 
+                         class="gallery-image">
+                    <div class="image-overlay">
+                        <div class="location-text">Kilimanjaro Alpine Zone</div>
+                        <div class="info-text">Snow-capped peak rising above volcanic rocks and alpine vegetation at 4,000m altitude</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 4 -->
+            <div>
+                <div class="gallery-image-container">
+                    <img src="https://images.unsplash.com/photo-1509219411165-3c7ff4126963" 
+                         alt="Tarangire" 
+                         class="gallery-image">
+                    <div class="image-overlay">
+                        <div class="location-text">Tarangire National Park</div>
+                        <div class="info-text">Known for its large elephant herds and ancient baobab trees</div>
+                    </div>
+                </div>
+            </div>
+            <div class="span-2">
+                <div class="gallery-image-container">
+                    <img src="https://images.unsplash.com/photo-1566911272007-2df4bff2c8a0" 
+                         alt="Selous Game Reserve" 
+                         class="gallery-image">
+                    <div class="image-overlay">
+                        <div class="location-text">Selous Game Reserve</div>
+                        <div class="info-text">Africa's largest game reserve, untouched wilderness</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 5 -->
+            <div class="span-col-2">
+                <div class="gallery-image-container">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801" 
+                         alt="Ruaha National Park" 
+                         class="gallery-image">
+                    <div class="image-overlay">
+                        <div class="location-text">Ruaha National Park</div>
+                        <div class="info-text">Tanzania's largest national park, featuring dramatic landscapes</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="gallery-image-container">
+                    <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53" 
+                         alt="Mafia Island" 
+                         class="gallery-image">
+                    <div class="image-overlay">
+                        <div class="location-text">Mafia Island</div>
+                        <div class="info-text">Premier diving destination with rich marine life</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Minimal Footer -->
+    <footer class="py-12 px-8 text-gray-600 text-sm">
+        <div class="max-w-7xl mx-auto flex justify-between">
+            <div>
+                <p>© Tanzania Adventures</p>
+            </div>
+            <div class="space-x-8">
+                <a href="#" class="hover:text-gray-900">Instagram</a>
+                <a href="#" class="hover:text-gray-900">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

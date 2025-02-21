@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Routes - Tanzania Adventures</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts - Dancing Script -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #c08448;
+            --primary-hover: #a06836;
+        }
+
+        .nav-link {
+            position: relative;
+            color: black;
+            text-decoration: none;
+            padding-bottom: 2px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .route-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .route-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-button {
+            background-color: var(--primary-color);
+            color: white;
+            transition: all 0.3s ease;
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .book-button:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-5xl font-bold text-black">BLACKSAND <span class="text-4xl" style="font-family: 'Dancing Script', cursive; color: var(--primary-color);">Adventures</span></a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-lg">Home</a>
+                    <div class="relative group">
+                        <a href="#" class="nav-link text-lg flex items-center">
+                            Routes <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </a>
+                        <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-lg mt-2 py-2">
+                            <a href="#safari" class="block px-4 py-2 text-gray-700 hover:bg-[#c08448] hover:text-white transition-colors duration-300">Safari Tours</a>
+                            <a href="#water" class="block px-4 py-2 text-gray-700 hover:bg-[#c08448] hover:text-white transition-colors duration-300">Water Tours</a>
+                            <a href="#hiking" class="block px-4 py-2 text-gray-700 hover:bg-[#c08448] hover:text-white transition-colors duration-300">Mountain Hiking</a>
+                            <a href="#cultural" class="block px-4 py-2 text-gray-700 hover:bg-[#c08448] hover:text-white transition-colors duration-300">Cultural Safari</a>
+                        </div>
+                    </div>
+                    <a href="index.html#packages" class="nav-link text-lg">Packages</a>
+                    <a href="gallaries.html" class="nav-link text-lg">Gallery</a>
+                    <a href="index.html#contact" class="nav-link text-lg">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Title -->
+    <div class="bg-[#c08448] text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold mb-4">Our Safari Routes</h1>
+            <p class="text-xl">Discover the beauty of Tanzania through our carefully curated tours</p>
+        </div>
+    </div>
+
+    <!-- Safari Tours Section -->
+    <section id="safari" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-4">Safari Tours</h2>
+            <div class="w-24 h-1 bg-[#c08448] mx-auto mb-12"></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden route-card">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801" alt="Serengeti Safari" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Serengeti Safari</h3>
+                        <p class="text-gray-600 mb-4">Witness the great migration and abundant wildlife in Tanzania's most famous national park.</p>
+                        <p class="text-green-600 font-bold">3-7 days</p>
+                        <button class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Book Now</button>
+                        <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Discover</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden route-card">
+                    <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e" alt="Ngorongoro Crater" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Ngorongoro Crater</h3>
+                        <p class="text-gray-600 mb-4">Explore the world's largest intact volcanic caldera and its diverse wildlife.</p>
+                        <p class="text-green-600 font-bold">2-4 days</p>
+                        <button class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Book Now</button>
+                        <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Discover</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden route-card">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801" alt="Tarangire National Park" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Tarangire National Park</h3>
+                        <p class="text-gray-600 mb-4">See massive herds of elephants and ancient baobab trees.</p>
+                        <p class="text-green-600 font-bold">2-3 days</p>
+                        <button class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Book Now</button>
+                        <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Discover</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Water Tours Section -->
+    <section id="water" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Water Tours</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden route-card">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5" alt="Zanzibar Beaches" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Zanzibar Beaches</h3>
+                        <p class="text-gray-600 mb-4">Relax on pristine white sand beaches and swim in crystal clear waters.</p>
+                        <p class="text-green-600 font-bold">4-7 days</p>
+                        <button class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Book Now</button>
+                        <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Discover</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden route-card">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5" alt="Snorkeling & Diving" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Snorkeling & Diving</h3>
+                        <p class="text-gray-600 mb-4">Discover vibrant coral reefs and marine life in the Indian Ocean.</p>
+                        <p class="text-green-600 font-bold">1-3 days</p>
+                        <button class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Book Now</button>
+                        <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Discover</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden route-card">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5" alt="Island Hopping" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Island Hopping</h3>
+                        <p class="text-gray-600 mb-4">Visit multiple tropical islands and experience different cultures.</p>
+                        <p class="text-green-600 font-bold">5-10 days</p>
+                        <button class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Book Now</button>
+                        <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Discover</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mountain Hiking Section -->
+    <section id="hiking" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Mountain Hiking</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden route-card">
+                    <img src="https://images.unsplash.com/photo-1609198092458-38a293c7ac4b" alt="Mount Kilimanjaro" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mount Kilimanjaro</h3>
+                        <p class="text-gray-600 mb-4">Climb Africa's highest peak through various routes.</p>
+                        <p class="text-green-600 font-bold">6-9 days</p>
+                        <button class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Book Now</button>
+                        <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Discover</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden route-card">
+                    <img src="https://images.unsplash.com/photo-1609198092458-38a293c7ac4b" alt="Mount Meru" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mount Meru</h3>
+                        <p class="text-gray-600 mb-4">Tanzania's second-highest peak with spectacular views.</p>
+                        <p class="text-green-600 font-bold">4-5 days</p>
+                        <button class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Book Now</button>
+                        <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Discover</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden route-card">
+                    <img src="https://images.unsplash.com/photo-1609198092458-38a293c7ac4b" alt="Ol Doinyo Lengai" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Ol Doinyo Lengai</h3>
+                        <p class="text-gray-600 mb-4">Climb the only active volcanic mountain in Tanzania.</p>
+                        <p class="text-green-600 font-bold">2-3 days</p>
+                        <button class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Book Now</button>
+                        <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Discover</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Safari Section -->
+    <section id="cultural" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Cultural Safari</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden route-card">
+                    <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53" alt="Maasai Village" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Maasai Village Visit</h3>
+                        <p class="text-gray-600 mb-4">Experience the traditional life of the Maasai people.</p>
+                        <p class="text-[#c08448] font-bold mb-4">1-2 days</p>
+                        <button class="book-button">Book Now</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden route-card">
+                    <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53" alt="Hadzabe Tribe" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Hadzabe Tribe Experience</h3>
+                        <p class="text-gray-600 mb-4">Learn hunting and gathering techniques from this ancient tribe.</p>
+                        <p class="text-[#c08448] font-bold mb-4">2-3 days</p>
+                        <button class="book-button">Book Now</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden route-card">
+                    <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53" alt="Stone Town" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Stone Town Heritage</h3>
+                        <p class="text-gray-600 mb-4">Explore the historic streets and architecture of Zanzibar's Stone Town.</p>
+                        <p class="text-[#c08448] font-bold mb-4">1-2 days</p>
+                        <button class="book-button">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">BLACKSAND <span style="font-family: 'Dancing Script', cursive;">Adventures</span></h3>
+                    <p class="text-gray-400">Your gateway to Tanzania's wonders</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <p class="text-gray-400">Email: info@tanzaniaadventures.com</p>
+                    <p class="text-gray-400">Phone: +255 123 456 789</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

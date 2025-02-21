@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanzania Safari Adventures</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts - Dancing Script -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #c08448;
+            --primary-hover: #a06836;
+        }
+
+        .explore-button {
+            width: 200px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 12px;
+            background-color: var(--primary-color);
+            border-radius: 30px;
+            color: white;
+            font-weight: 600;
+            border: none;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(192, 132, 72, 0.3);
+            padding-left: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .explore-button .svgIcon {
+            height: 28px;
+            transition: transform 0.5s ease;
+            fill: white;
+        }
+        
+        .explore-button:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(192, 132, 72, 0.4);
+        }
+        
+        .explore-button:active {
+            transform: scale(0.97);
+        }
+        
+        .explore-button:hover .svgIcon {
+            transform: rotate(90deg);
+        }
+
+        .nav-link {
+            position: relative;
+            color: black;
+            text-decoration: none;
+            padding-bottom: 2px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .route-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .route-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .primary-button {
+            background-color: var(--primary-color);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .primary-button:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-5xl font-bold text-black">BLACKSAND <span class="text-4xl" style="font-family: 'Dancing Script', cursive; color: var(--primary-color);">Adventures</span></h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-lg">Home</a>
+                    <div class="relative group">
+                        <a href="routes.html" class="nav-link text-lg flex items-center">
+                            Routes <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </a>
+                        <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-lg mt-2 py-2 transform transition-all duration-300">
+                            <a href="routes.html#safari" class="block px-4 py-2 text-gray-700 hover:bg-[#c08448] hover:text-white transition-colors duration-300">Safari Tours</a>
+                            <a href="routes.html#water" class="block px-4 py-2 text-gray-700 hover:bg-[#c08448] hover:text-white transition-colors duration-300">Water Tours</a>
+                            <a href="routes.html#hiking" class="block px-4 py-2 text-gray-700 hover:bg-[#c08448] hover:text-white transition-colors duration-300">Mountain Hiking</a>
+                            <a href="routes.html#cultural" class="block px-4 py-2 text-gray-700 hover:bg-[#c08448] hover:text-white transition-colors duration-300">Cultural Safari</a>
+                        </div>
+                    </div>
+                    <a href="#packages" class="nav-link text-lg">Packages</a>
+                    <a href="galleries.html" class="nav-link text-lg">Gallery</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative h-screen">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3')"></div>
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="relative max-w-7xl mx-auto px-4 h-full flex items-center">
+            <div class="text-white max-w-2xl">
+                <h1 class="text-6xl font-bold mb-6">Discover Tanzania's Wonders</h1>
+                <p class="text-2xl mb-8 text-gray-200">Experience the magic of safaris, mountains, and cultural heritage</p>
+                <button class="explore-button">
+                    <svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
+                    Explore Adventures
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Experiences -->
+    <section id="experiences" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured Experiences</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Safari -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden route-card">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801" alt="Safari Tour" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Safari Tours</h3>
+                        <p class="text-gray-600 mb-4">Experience wildlife in their natural habitat</p>
+                        <a href="routes.html#safari" class="text-green-600 font-bold hover:text-green-700">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Water Tours -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden route-card">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5" alt="Water Tours" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Water Tours</h3>
+                        <p class="text-gray-600 mb-4">Explore Tanzania's beautiful waters</p>
+                        <a href="routes.html#water" class="text-green-600 font-bold hover:text-green-700">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Mountain Hiking -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden route-card">
+                    <img src="https://images.unsplash.com/photo-1609198092458-38a293c7ac4b" alt="Mountain Hiking" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mountain Hiking</h3>
+                        <p class="text-gray-600 mb-4">Conquer Tanzania's majestic peaks</p>
+                        <a href="routes.html#hiking" class="text-green-600 font-bold hover:text-green-700">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Cultural Safari -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden route-card">
+                    <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53" alt="Cultural Safari" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Cultural Safari</h3>
+                        <p class="text-gray-600 mb-4">Immerse in local traditions</p>
+                        <a href="routes.html#cultural" class="text-green-600 font-bold hover:text-green-700">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <i class="fas fa-mountain text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Expert Guides</h3>
+                    <p class="text-gray-600">Experienced local guides with extensive knowledge</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-shield-alt text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Safety First</h3>
+                    <p class="text-gray-600">Top-notch safety equipment and procedures</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-users text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Small Groups</h3>
+                    <p class="text-gray-600">Intimate groups for better experience</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-check-circle text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Success Rate</h3>
+                    <p class="text-gray-600">High summit success rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Tanzania Adventures</h3>
+                    <p class="text-gray-400">Your gateway to Tanzania's wonders</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <p class="text-gray-400">Email: info@tanzaniaadventures.com</p>
+                    <p class="text-gray-400">Phone: +255 123 456 789</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html> 
